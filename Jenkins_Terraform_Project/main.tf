@@ -16,7 +16,7 @@ resource "aws_instance" "Jenkins_Project_Instance" {
     #!/bin/bash
     set -xe
     dnf update -y
-    dnf install -y java-17-amazon-corretto curl
+    dnf install -y java-17-amazon-corretto
     rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
     curl -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
     dnf install -y jenkins
